@@ -16,4 +16,4 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-     run: echo "$welcome to Github"
+     - run: echo "$welcome to Github"
