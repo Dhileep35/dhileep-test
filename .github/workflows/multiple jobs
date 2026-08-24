@@ -1,20 +1,20 @@
-name: multiple jobs
+name: Multiple Jobs Example
 
 on:
- push:
-  branches: [main]
+  push:
+    branches: [main]
 
 jobs:
-  job01:
-    runs-on: ubuntu-latest
-
-  steps:
-    - name: print job01
-      run: echo "Hello world"
-
-  job02:
+  job1:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print job02
-        run: echo "welcome to github"
+      - name: Print Message 1
+        run: echo "Hello from Job 1"
+
+  job2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message 2
+        run: echo "Hello from Job 2"
