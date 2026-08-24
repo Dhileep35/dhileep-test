@@ -1,18 +1,20 @@
-name: create multiple jobs
+name: multiple jobs
 
 on:
  push:
   branches: [main]
 
 jobs:
- job-name:
-  runs-on: ubuntu-latest
+  job01:
+    runs-on: ubuntu-latest
 
   steps:
-   - name: Printing
-     run: echo "Hello World"
+    - name: print job01
+      run: echo "Hello world"
 
- job-name01:
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo "welcome to Github"
+  job02:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print job02
+        run: echo "welcome to github"
