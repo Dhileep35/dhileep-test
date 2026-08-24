@@ -12,10 +12,8 @@ jobs:
    - name: Printing
      run: echo "Hello World"
 
-jobs:
  job-name1:
   runs-on: ubuntu-latest
 
   steps:
-   - name: print
      run: echo "$welcome to Github"
