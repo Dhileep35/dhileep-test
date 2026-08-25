@@ -1,0 +1,15 @@
+name: Variables Demo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  job-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: using variables
+        run: |
+          city=Pune
+          echo $city
