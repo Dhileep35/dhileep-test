@@ -1,9 +1,8 @@
 name: Printing Hello World
 
 on:
-  push:
-    branches: [main]
-
+  workflow_dispatch:
+  
 jobs:
   job-name:
     runs-on: ubuntu-latest
