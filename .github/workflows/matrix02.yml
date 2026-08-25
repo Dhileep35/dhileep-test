@@ -5,16 +5,25 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    
     strategy:
       fail-fast: true
       max-parallel: 3
       matrix:
         java: [18,20,21]
         os: [mac-latest, ubuntu-latest, windows-latest]
+        
         exclude:
           - java: 20
-            os: [mac-latest, ubuntu-latest]
+            os: mac-latest
+          - java: 18
+            os: windows-latest
+
+        include:
+          - java: 25
+            os: self-hosted
+         
 
     steps:
-      - run: echo "Java ${{ matrix.java }}
+      - run: echo "Java ${{ matrix.java }}"
