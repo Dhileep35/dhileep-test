@@ -1,0 +1,20 @@
+name: matrix Example
+
+on:
+ workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      max-parallel: 3
+      matrix:
+        java: [18,20,21]
+        os: [mac-latest, ubuntu-latest, windows-latest]
+        exclude:
+          - java: 20
+            os: [mac-latest, ubuntu-latest]
+
+    steps:
+      - run: echo "Java ${{ matrix.java }}
