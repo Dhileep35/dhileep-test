@@ -12,11 +12,11 @@ jobs:
       max-parallel: 3
       matrix:
         java: [18,20,21]
-        os: [mac-latest, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         
         exclude:
           - java: 20
-            os: mac-latest
+            os: macos-latest
           - java: 18
             os: windows-latest
 
