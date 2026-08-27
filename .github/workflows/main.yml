@@ -1,10 +1,10 @@
-name: Demo Workflow
+name: Demo
 
 on:
   workflow_dispatch:
 
 jobs:
-  demo:
+  job-name:
     runs-on: ubuntu-latest
 
     steps:
