@@ -1,10 +1,13 @@
 name: My Action
+description: Simple composite action
 
 runs:
   using: composite
   steps:
-    - shell: bash
+    - name: Hello
+      shell: bash
       run: echo "Hello"
 
-    - shell: bash
+    - name: Welcome
+      shell: bash
       run: echo "Welcome to Composite Action"
