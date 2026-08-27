@@ -1,14 +1,14 @@
 name: Demo
 
 on:
- workflow_dispatch:
+  workflow_dispatch: 
 
 jobs:
-  test:
+  demo:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run My Action
+      - name: Run Composite Action
         uses: ./.github/actions/my-action
